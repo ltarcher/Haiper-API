@@ -1,0 +1,7 @@
+__pycache__/
+images/
+.vscode/
+.env
+Dockerfile
+docker-compose.yml
+README.md
