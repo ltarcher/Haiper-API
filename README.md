@@ -34,12 +34,6 @@ For this part, refer to the FastAPI documentation on your own.
 uvicorn main:app --port 8001
 ```
 
-#### Docker
-
-```bash
-docker compose build && docker compose up
-```
-
 #### Documentation
 
 After setting up the service, visit /docs

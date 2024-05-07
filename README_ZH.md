@@ -38,12 +38,6 @@ pip3 install -r requirements.txt
 uvicorn main:app --port 8001
 ```
 
-#### Docker
-
-```bash
-docker compose build && docker compose up
-```
-
 #### 文档
 
 搭建服务后访问 /docs
