@@ -31,7 +31,7 @@ async def fetch(url, headers=None, data=None, method="POST"):
 
     print(data, method, headers, url)
 
-    proxy = os.getenv("PROXY_ADDRESS") if os.getenv("REQUEST_USE_PROXY") else None
+    proxy = os.getenv("PROXY_ADDRESS") if int(os.getenv("REQUEST_USE_PROXY")) else None
 
     async with aiohttp.ClientSession() as session:
         try:
@@ -43,7 +43,7 @@ async def fetch(url, headers=None, data=None, method="POST"):
                     return
                 return await resp.json()
         except Exception as e:
-            return f"An error occurred: {e}"
+            return {f"An error occurred: {e}"}
 
 #查询用户ID
 async def get_user_id(token):

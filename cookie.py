@@ -60,7 +60,7 @@ def update_token(haiper_cookie: HaiperCookie):
         proxies={
             "http": os.getenv("PROXY_ADDRESS"),
             "https": os.getenv("PROXY_ADDRESS"),
-        }  if os.getenv("USE_PROXY") else None
+        }  if int(os.getenv("USE_PROXY")) else None
     )
 
     resp_headers = dict(resp.headers)
